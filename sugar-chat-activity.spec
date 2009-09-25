@@ -12,10 +12,10 @@ Url: http://sugarlabs.org/
 Source: http://download.sugarlabs.org/sources/sucrose/fructose/Chat/Chat-66.tar.bz2
 
 Requires: python-simplejson  
-Requires: sugar-toolkit >= 0.85.8
+Requires: sugar-toolkit >= 0.86.0
 
 BuildRequires: gettext  
-BuildRequires: sugar-toolkit >= 0.85.8
+BuildRequires: sugar-toolkit >= 0.86.0
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
