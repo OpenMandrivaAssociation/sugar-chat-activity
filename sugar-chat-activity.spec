@@ -12,10 +12,10 @@ Url: http://sugarlabs.org/
 Source: http://download.sugarlabs.org/sources/sucrose/fructose/Chat/Chat-66.tar.bz2
 
 Requires: python-simplejson  
-Requires: sugar-toolkit >= 0.88.0
+Requires: sugar-toolkit >= 0.85.8
 
 BuildRequires: gettext  
-BuildRequires: sugar-toolkit >= 0.88.0
+BuildRequires: sugar-toolkit >= 0.85.8
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
@@ -51,4 +51,31 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 %{_datadir}/sugar/activities/*
 %doc AUTHORS COPYING NEWS
+
+
+
+%changelog
+* Sat Sep 19 2009 Aleksey Lim <alsroot@mandriva.org> 66-1mdv2010.0
++ Revision: 444540
+- Update to 66
+
+* Mon Apr 06 2009 Aleksey Lim <alsroot@mandriva.org> 65-1mdv2009.1
++ Revision: 364287
+- Sucrose 0.84.2 release
+
+* Wed Mar 04 2009 Aleksey Lim <alsroot@mandriva.org> 64-1mdv2009.1
++ Revision: 348316
+- Sucrose 0.84.0 release
+
+* Mon Feb 23 2009 Aleksey Lim <alsroot@mandriva.org> 63-1mdv2009.1
++ Revision: 344204
+- Sucrose 0.83.6 release
+
+* Tue Jan 20 2009 Aleksey Lim <alsroot@mandriva.org> 62-1mdv2009.1
++ Revision: 331984
+- new Sucrose 0.83.4 release
+
+* Sun Jan 11 2009 Aleksey Lim <alsroot@mandriva.org> 61-1mdv2009.1
++ Revision: 328396
+- initial commit
 
