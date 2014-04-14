@@ -2,14 +2,14 @@
 #       See http://wiki.sugarlabs.org/go/Deployment_Team/jhconvert for details
 
 Name: sugar-chat-activity
-Version: 66
-Release: %mkrel 1
+Version: 78
+Release: 1
 Summary: Instant messaging client for Sugar
 License: GPLv2+
 Group: Graphical desktop/Other
 Url: http://sugarlabs.org/
 
-Source: http://download.sugarlabs.org/sources/sucrose/fructose/Chat/Chat-66.tar.bz2
+Source: http://download.sugarlabs.org/sources/sucrose/fructose/Chat/Chat-%{version}.tar.bz2
 
 Requires: python-simplejson  
 Requires: sugar-toolkit >= 0.85.8
@@ -30,7 +30,7 @@ and provide a means of searching through the conversation to locate
 important comments.
 
 %prep
-%setup -q -n Chat-66
+%setup -q -n Chat-%{version}
 
 
 %build
