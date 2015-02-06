@@ -3,7 +3,7 @@
 
 Name: sugar-chat-activity
 Version: 78
-Release: 1
+Release: 2
 Summary: Instant messaging client for Sugar
 License: GPLv2+
 Group: Graphical desktop/Other
