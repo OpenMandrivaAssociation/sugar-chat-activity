@@ -2,8 +2,8 @@
 #       See http://wiki.sugarlabs.org/go/Deployment_Team/jhconvert for details
 
 Name: sugar-chat-activity
-Version: 78
-Release: 2
+Version: 81
+Release: 1
 Summary: Instant messaging client for Sugar
 License: GPLv2+
 Group: Graphical desktop/Other
@@ -11,13 +11,12 @@ Url: http://sugarlabs.org/
 
 Source: http://download.sugarlabs.org/sources/sucrose/fructose/Chat/Chat-%{version}.tar.bz2
 
-Requires: python-simplejson  
-Requires: sugar-toolkit >= 0.85.8
+Requires: python2-simplejson  
+Requires: sugar-toolkit-gtk3 >= 0.85.8
 
 BuildRequires: gettext  
-BuildRequires: sugar-toolkit >= 0.85.8
+BuildRequires: sugar-toolkit-gtk3 >= 0.85.8
 
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 
 %description
@@ -36,19 +35,14 @@ important comments.
 %build
 
 rm -f MANIFEST
-python setup.py build
+python2 setup.py build
 
 %install
-rm -rf %{buildroot}
-python setup.py install --prefix=%{buildroot}/%{_prefix}
+python2 setup.py install --prefix=%{buildroot}/%{_prefix}
 find %{buildroot} -name '*.py.orig' -print0 | xargs -0 rm -f
 %find_lang org.laptop.Chat
 
-%clean
-rm -rf %{buildroot}
-
 %files -f org.laptop.Chat.lang
-%defattr(-,root,root,-)
 %{_datadir}/sugar/activities/*
 %doc AUTHORS COPYING NEWS
 
